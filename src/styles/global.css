@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --pink-color: #EB567B;
+}
+
+.c1, .c6, .c7, .c8, .c9, .c10 {
+    padding-bottom: 13px;
+}
+
+fieldset {
+    border-radius: 12px !important;
+    border-color: rgba(62, 62, 62, 0.23) !important;
+}
+
+.animation {
+    box-shadow: inset 0 0 0 0 black;
+    color: white;
+    /* margin: 0 -.25rem;
+    padding: 0 .25rem; */
+    transition: color .6s ease-in-out, box-shadow .6s ease-in-out;
+}
+
+.animation:hover {
+    box-shadow: inset 1800px 0 0 0 #ffffff;
+    color: black;
+}
+
+.status-dot {
+    mix-blend-mode: normal;
+    background-color: #15ff00;
+    width: .4em;
+    height: .4em;
+}
+
+.font-gray {
+    color: #acacac;
+    font-family: "MyCustomFont", sans-serif;
+}
+
+.graycolor {
+    color: #717171;
+}
+
+.myFont {
+    font-family: "MyCustomFont", sans-serif;
+}
+
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("/my-font.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
