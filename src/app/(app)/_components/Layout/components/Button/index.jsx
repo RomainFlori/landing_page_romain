@@ -30,7 +30,7 @@ export default function CustomizedDialogs({title, firstletter}) {
 
 	return (
 		<React.Fragment>
-			<Button onClick={handleClickOpen} className="animation myFont text-white hover:scale-105 duration-200 font-semibold">
+			<Button onClick={handleClickOpen} className="my-animation myFont text-white hover:scale-105 duration-200 font-semibold">
 				{firstletter}
 				<div className="myFont lowercase">{title}</div>
 			</Button>

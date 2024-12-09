@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import Image from "next/image"
 import BasicModal from "../Button"
-import sherpaiIcon from "../../../../../../../public/svg/sherpai-logo.svg"
 
 const Footer = () => (
 	<div className="md:flex-column items-center w-full md:px-11 px-5 pb-5 bg-black text-white">
@@ -33,12 +32,8 @@ const Footer = () => (
 		<div className="flex items-center w-full">
 			<div className="flex grow font-semibold">
 				<p className="text-center">©Romain Flori-Cantrelle {new Date().getFullYear()}</p>
+				<p>Site développé avec Next.js - TailwindCss</p>
 			</div>
-			{/* <div className="flex space-x-9">
-				<a className="text-center link-underline link-underline-black hover:scale-105 duration-200 font-semibold" href="/info" rel="noreferrer">
-					Mentions legales
-				</a>
-			</div> */}
 		</div>
 	</div>
 )
