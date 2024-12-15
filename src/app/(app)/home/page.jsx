@@ -2,7 +2,8 @@
 
 import Image from "next/image"
 import "../../../styles/cyberpunk.css"
-import {useEffect, useState} from "react"
+import {useEffect, useState, useRef} from "react"
+import Card from "../_components/Layout/components/Card"
 
 export default function HomePage() {
   // First useEffect: For graycube sliding effect
@@ -91,14 +92,14 @@ export default function HomePage() {
             MES STAGES & ALTERNANCES.
           </h3>
         </div>
-        <div className=" px-4 flex w-full justify-end my-10 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
-          <p className="text-lg myFont graycolor">
+        <div className=" px-4 flex w-full justify-end my-20 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
+          <p className="text-lg myFont graycolor mb-20">
             Pendant mes études j'ai fais un total de <u>3 stages</u> et <u>2 alternances</u>.
           </p>
         </div>
 
-        <div className=" px-4 flex w-full my-20 py-10 justify-between ">
-          <div className="transition duration-500 zoom">
+        <div className=" px-10 flex w-full my-20 py-10 justify-between ">
+          {/* <div className="transition duration-500 zoom">
             <div
               style={{
                 transform: `translateY(${scrollY * 0.1 - 210}px)`,
@@ -109,51 +110,119 @@ export default function HomePage() {
               <div className="flex justify-center mb-3">
                 <img alt="img" src="/img/sokeo_logo.jpg" />
               </div>
-              <p className="text-lg myFont my-3">Développeur fullstack</p>
+              <p className="text-lg myFont my-3"></p>
 
-              <p className="graycolor">Php, Cakephp, Css, Html, Boostrap, TailwindCss</p>
+              <p className="graycolor"></p>
             </div>
+          </div> */}
+
+          <div
+            style={{
+              transform: `translateY(${scrollY * 0.1 - 210}px)`,
+              transition: "transform 0.5s ease-out",
+            }}
+          >
+            <Card
+              cardId="card-81"
+              avatar="/img/sokeo_logo.jpg"
+              year="2019"
+              workExperience="Développement de landing page et implémentation de nouveaux design fait par un designer"
+              description="Php, Javascript, Css, Html, Boostrap"
+              fullname="Sokeo"
+              jobtitle="Développeur front-end"
+              internship="STAGE"
+            />
           </div>
 
-          <div className="transition duration-500 zoom">
-            <div
-              style={{
-                transform: `translateY(${scrollY * 0.15 - 240}px)`,
-                transition: "transform 0.4s ease-out",
-              }}
-              className="graycube flex flex-col p-5"
-            >
-              <div className="mb-3 flex justify-center">
-                <img className="" style={{height: 200, width: 200}} alt="img" src="/img/polyconseil.webp" />
-              </div>
+          <div
+            style={{
+              transform: `translateY(${scrollY * -0.3 + 640}px)`,
+              transition: "transform 0.5s ease-out",
+            }}
+          >
+            <Card
+              cardId="card-5410"
 
-              <p className="text-lg myFont my-3">Développeur backend</p>
-
-              <p className="graycolor">Typescript, Postman, APIs, Agile</p>
-            </div>
+              avatar="/img/polyconseil.webp"
+              year="2023"
+              workExperience="Développement du produit Sherp.ai
+                  Développement du site vitrine: Sherp.ai 
+                  Développement du site web officiel de Loopsider en Next.js
+                  "
+              description="Typescript, Postman, APIs, Agile"
+              fullname="Polyconseil"
+              jobtitle="Développeur Backend"
+              internship="ALTERNANCE"
+            />
           </div>
 
-          <div className="transition duration-500 zoom">
-            <div
-              style={{
-                transform: `translateY(${scrollY * 0.1 - 210}px)`,
-                transition: "transform 0.5s ease-out",
-              }}
-              className="graycube flex flex-col p-5"
-            >
-              <div className="mb-3 flex justify-center">
-                <img className="" alt="img" style={{height: 200, width: 200}} src="/img/loopsider_logo.jpg" />
-              </div>
+          <div
+            style={{
+              transform: `translateY(${scrollY * 0.3 - 510}px)`,
+              transition: "transform 0.5s ease-out",
+            }}
+          >
+            <Card
+              cardId="card-120"
 
-              <p className="text-lg myFont my-3">Développeur fullstack</p>
-
-              <p className="graycolor">Javascript, React.js, Agile</p>
-            </div>
+              avatar="/img/loopsider_logo.jpg"
+              year="2024"
+              workExperience="Développement du produit Sherp.ai
+                  Développement du site vitrine: Sherp.ai 
+                  Développement du site web officiel de Loopsider en Next.js
+                  "
+              description="Javascript, React.js, Agile"
+              fullname="Loopsider"
+              jobtitle="Développeur Fullstack"
+              internship="STAGE - 6 mois"
+            />
           </div>
+          <div
+            style={{
+              transform: `translateY(${scrollY * 0.1 - 210}px)`,
+              transition: "transform 0.5s ease-out",
+            }}
+          >
+            <Card
+              cardId="card-10"
+
+              avatar="/img/sokeo_logo.jpg"
+              year="2020"
+              workExperience="Développement d'un e-commerce avec intégration de l'API Stripe'"
+              description="Cakephp, React.js, Boostrap"
+              fullname="Sokeo"
+              jobtitle="Développeur fullstack"
+              internship="ALTERNANCE"
+            />
+          </div>
+        </div>
+
+        <div className=" px-10 flex w-full justify-between ">
+          <div
+            style={{
+              transform: `translateY(${scrollY * 0.1 - 210}px)`,
+              transition: "transform 0.5s ease-out",
+            }}
+          >
+            <Card
+              cardId="card-177"
+              avatar="/img/sokeo_logo.jpg"
+              year="2021"
+              workExperience="Développement de site web avec backoffice et implémentation de design"
+              description="Php, Symphony, tailwindCss, React.Js"
+              fullname="Sokeo"
+              jobtitle="Développeur fullstack PHP"
+              internship="STAGE"
+            />
+          </div>
+
+
+         
+          
         </div>
       </div>
 
-      <div className="" id="projects">
+      <div className="py-20" id="projects">
         <div className="px-4 w-1/2 text-white myFont text-6xl my-20 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
           <h3 className="">MES PROJETS EN LIGNE.</h3>
         </div>
