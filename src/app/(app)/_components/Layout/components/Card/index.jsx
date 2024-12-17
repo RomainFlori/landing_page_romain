@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import "../../../../../../styles/cards.css"
 
 const Card = ({
@@ -11,7 +11,7 @@ const Card = ({
   about,
   workExperience,
   internship,
-  cardId, // Add a unique ID for each card
+  cardId, // Unique card ID
 }) => {
   const [activeSection, setActiveSection] = useState("#about")
 
@@ -19,49 +19,8 @@ const Card = ({
     setActiveSection(section)
   }
 
-  useEffect(() => {
-    const card = document.querySelector(`#${cardId}`) // Select card by unique ID
-    const buttons = card.querySelectorAll(".card-buttons button")
-    const sections = card.querySelectorAll(".card-section")
-
-    const handleButtonClick = (e) => {
-      const targetSection = e.target.getAttribute("data-section")
-      const section = document.querySelector(targetSection)
-
-      if (card) {
-        if (targetSection !== "#about") {
-          card.classList.add("is-active")
-        } else {
-          card.classList.remove("is-active")
-        }
-
-        card.setAttribute("data-state", targetSection)
-
-        sections.forEach((s) => s.classList.remove("is-active"))
-        buttons.forEach((b) => b.classList.remove("is-active"))
-
-        e.target.classList.add("is-active")
-        section.classList.add("is-active")
-
-        // Update state for active section
-        setActiveSection(targetSection)
-      }
-    }
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", handleButtonClick)
-    })
-
-    return () => {
-      // Cleanup event listeners when card is removed
-      buttons.forEach((btn) => {
-        btn.removeEventListener("click", handleButtonClick)
-      })
-    }
-  }, [cardId]) // Re-run effect when cardId changes
-
   return (
-    <div className="card" id={cardId} data-state={activeSection}>
+    <div className={`card ${activeSection !== "#about" ? "is-active" : ""}`} id={cardId}>
       <div className="card-header">
         <div
           className="card-cover"
@@ -76,25 +35,29 @@ const Card = ({
 
       <div className="card-main">
         {/* About Section */}
-        <div className={`card-section ${activeSection === "#about" ? "is-active" : ""}`} id="about">
-          <div className="card-content">
-            <div className="card-subtitle">{internship}</div>
-            <p className="card-desc">{description}</p>
-            <div className="card-desc pt-2">{time}</div>
+        {activeSection === "#about" && (
+          <div className="card-section is-active" id="about">
+            <div className="card-content">
+              <div className="card-subtitle">{internship}</div>
+              <p className="card-desc">{description}</p>
+              <div className="card-desc pt-2">{time}</div>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Experience Section */}
-        <div className={`card-section ${activeSection === "#experience" ? "is-active" : ""}`} id="experience">
-          <div className="card-content">
-            <div className="card-subtitle">MON EXPERIENCE</div>
-            <div className="card-timeline">
-              <div className="card-item" data-year={`${year}`}>
-                <div className="card-item-title">{workExperience}</div>
+        {activeSection === "#experience" && (
+          <div className="card-section is-active" id="experience">
+            <div className="card-content">
+              <div className="card-subtitle">MON EXPERIENCE</div>
+              <div className="card-timeline">
+                <div className="card-item" data-year={`${year}`}>
+                  <div className="card-item-title">{workExperience}</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Buttons */}
         <div className="card-buttons">

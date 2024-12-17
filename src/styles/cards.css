@@ -18,26 +18,23 @@
   }
   
   .card[data-state="#about"] {
-    height: 380px;
-    .card-main {
-      padding-top: 0;
-    }
+    height: 400px;
   }
   
   .card[data-state="#experience"] {
     min-height: 450px;
   }
   
+  .card.is-active .card-header {
+    height: 80px;
+  }
+  
+  .card.is-active .card-cover {
+    height: 100px;
+    top: -50px;
+  }
+  
   .card.is-active {
-    .card-header {
-      height: 80px;
-    }
-  
-    .card-cover {
-      height: 100px;
-      top: -50px;
-    }
-  
     .card-avatar {
       transform: none;
       left: 20px;
@@ -187,24 +184,6 @@
     }
   }
   
-  .card-section {
-    display: none;
-    &.is-active {
-      display: block;
-      animation: fadeIn 0.6s both;
-    }
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translatey(40px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
   .card-timeline {
     margin-top: 30px;
     position: relative;
@@ -266,17 +245,21 @@
   .card-contact-wrapper {
     margin-top: 20px;
   }
-
-
-
   
-.card-section {
-  display: none;
-  &.is-active {
-      display: block;
-      animation: fadeIn 0.6s both;
+  .card-section {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s ease;
   }
-}
+  
+  .card-section.is-active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
 
 @keyframes fadeIn {
   0% {

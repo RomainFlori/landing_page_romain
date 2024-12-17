@@ -71,22 +71,37 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col my-20">
+      <div id="why" className="flex flex-col py-20 relative">
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-right" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-right" />
         <div className="animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out px-4 w-1/2 text-white myFont text-6xl">
           <h3 className="">DEVELOPPEMENT WEB.</h3>
-          <h3 className="">API.</h3>
+          <h3 className="glitchtext" title="API.">
+            API.
+          </h3>
           <h3 className="">BASE DE DONNEE.</h3>
         </div>
         <div className=" px-4 flex w-full justify-end my-20 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
           <p className="text-lg myFont graycolor w-1/2">
-            Je suis Romain Flori-Cantrelle, diplômé d'un Master 5 en programmation à Epitech Paris. Durant mes études, j'ai réalisé cinq stages, bien au-delà de la moyenne, privilégiant les projets
-            concrets et utiles en entreprise. En 4ᵉ année, j'ai étudié la finance à New York pour perfectionner mon anglais. Mon stage de fin d'études chez Loopsider en fullstack JavaScript m'a
-            confirmé ma passion pour le développement. Aujourd'hui, je recherche un CDI en programmation pour continuer à évoluer et m'épanouir dans ce métier.
+            Je suis Romain Flori-Cantrelle, diplômé d'un <b>Master 5 en programmation</b> à Epitech Paris. Durant mes études, j'ai réalisé cinq stages, bien au-delà de la moyenne, privilégiant les
+            projets concrets et utiles en entreprise. En 4ᵉ année, je suis partis à New York pour mes études, me permettant de perfectionner mon anglais. Mon stage de fin d'études chez{" "}
+            <b>Loopsider</b> en fullstack JavaScript m'a confirmé ma passion pour le développement. Aujourd'hui, je recherche un <b>CDI en programmation</b> pour continuer à évoluer et m'épanouir dans
+            ce métier.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col my-20">
+      <div className="py-10 px-10">
+        <div className="all-divider-line"></div>
+      </div>
+
+      <div className="flex flex-col pt-5 pb-20 relative">
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-right" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-right" />
         <div className=" px-4 text-white myFont text-6xl my-20 ">
           <h3 className="animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out glitchtext" title="MES STAGES & ALTERNANCES.">
             MES STAGES & ALTERNANCES.
@@ -99,23 +114,6 @@ export default function HomePage() {
         </div>
 
         <div className=" px-10 flex w-full my-20 py-10 justify-between ">
-          {/* <div className="transition duration-500 zoom">
-            <div
-              style={{
-                transform: `translateY(${scrollY * 0.1 - 210}px)`,
-                transition: "transform 0.5s ease-out",
-              }}
-              className="zoom graycube flex flex-col p-5 "
-            >
-              <div className="flex justify-center mb-3">
-                <img alt="img" src="/img/sokeo_logo.jpg" />
-              </div>
-              <p className="text-lg myFont my-3"></p>
-
-              <p className="graycolor"></p>
-            </div>
-          </div> */}
-
           <div
             style={{
               transform: `translateY(${scrollY * 0.1 - 210}px)`,
@@ -142,7 +140,6 @@ export default function HomePage() {
           >
             <Card
               cardId="card-5410"
-
               avatar="/img/polyconseil.webp"
               year="2023"
               workExperience="Développement du produit Sherp.ai
@@ -164,7 +161,6 @@ export default function HomePage() {
           >
             <Card
               cardId="card-120"
-
               avatar="/img/loopsider_logo.jpg"
               year="2024"
               workExperience="Développement du produit Sherp.ai
@@ -174,7 +170,7 @@ export default function HomePage() {
               description="Javascript, React.js, Agile"
               fullname="Loopsider"
               jobtitle="Développeur Fullstack"
-              internship="STAGE - 6 mois"
+              internship="STAGE"
             />
           </div>
           <div
@@ -185,7 +181,6 @@ export default function HomePage() {
           >
             <Card
               cardId="card-10"
-
               avatar="/img/sokeo_logo.jpg"
               year="2020"
               workExperience="Développement d'un e-commerce avec intégration de l'API Stripe'"
@@ -197,7 +192,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className=" px-10 flex w-full justify-between ">
+        <div className="pb-20 px-10 flex w-full justify-between ">
           <div
             style={{
               transform: `translateY(${scrollY * 0.1 - 210}px)`,
@@ -215,14 +210,18 @@ export default function HomePage() {
               internship="STAGE"
             />
           </div>
-
-
-         
-          
         </div>
       </div>
 
-      <div className="py-20" id="projects">
+      <div className="py-10 px-10">
+        <div className="all-divider-line"></div>
+      </div>
+
+      <div className="py-10 relative" id="projects">
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-top-right" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-left" />
+        <img src="/svg/corner.svg" alt="corner" className="small-corner is-bottom-right" />
         <div className="px-4 w-1/2 text-white myFont text-6xl my-20 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
           <h3 className="">MES PROJETS EN LIGNE.</h3>
         </div>
@@ -234,7 +233,7 @@ export default function HomePage() {
                   <img alt="img" src="/img/sherpai.png" />
                 </a>
               </div>
-              <p className="graycolor text-center mt-2">Développé avec Javascript & React.js </p>
+              <p className="graycolor text-center mt-2">Développé avec Javascript & React.js</p>
             </div>
           </div>
 
@@ -261,6 +260,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <div className="py-10"></div>
     </>
   )
 }

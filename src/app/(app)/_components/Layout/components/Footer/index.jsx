@@ -2,40 +2,52 @@
 import Image from "next/image"
 import BasicModal from "../Button"
 
-const Footer = () => (
-	<div className="md:flex-column items-center w-full md:px-11 px-5 pb-5 bg-black text-white">
-		<div className="flex w-full flex-row ">
-			{/* <div className="flex-column grow">
-				<Image src={sherpaiIcon} alt="sherpai logo" />
-				<BasicModal firstletter="D" title="emander une démo" />
-			</div> */}
-			{/* emplacements logos */}
-			{/* <div className="flex items-center space-x-2">
-				<a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-					<FaFacebook className="text-4xl hover:scale-105 duration-200 cursor-pointer" fill="var(--pink-color)" />
-				</a>
-				<a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-					<Image src={youtubeIcon} alt="instagram" height={35} />
-				</a>
-				<a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-					<Image src={instagramIcon} alt="instagram" height={35} />
-				</a>
-				<a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-					<Image src={tiktokIcon} alt="instagram" height={35} />
-				</a>
-				<a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-					<FaSnapchat className="text-4xl hover:scale-105 duration-200 cursor-pointer" fill="var(--pink-color)" />
-				</a>
-			</div> */}
-		</div>
+import "./animation.js"
 
-		<div className="flex items-center w-full">
-			<div className="flex grow font-semibold">
-				<p className="text-center">©Romain Flori-Cantrelle {new Date().getFullYear()}</p>
-				<p>Site développé avec Next.js - TailwindCss</p>
-			</div>
-		</div>
-	</div>
+const Footer = () => (
+  <>
+    <div className="md:flex-column items-center w-full md:px-11 px-5 pb-5 bg-black text-white">
+      <div className="all-divider-line my-10"></div>
+      <div className="flex myfont graycolor flex-row">
+        <div className="w-1/2">
+          <h2>Liens du site</h2>
+        </div>
+        <div className="w-1/2">
+          <h2>Autres liens</h2>
+        </div>
+      </div>
+      <div className="my-5 flex w-full flex-row ">
+        <div className="w-1/2">
+          <a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
+            <p>Home</p>
+          </a>
+		  <a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
+            <p>Home</p>
+          </a>
+        </div>
+
+        <div className="w-1/2 flex items-center space-x-2">
+          <a className="link-underline link-underline-black hover:scale-105 duration-200" target="_blank" href="https://www.linkedin.com/in/romain-flori-cantrelle/">
+            <img src="/svg/linkedin.svg" className="hover:scale-105 duration-200 cursor-pointer"></img>
+          </a>
+        </div>
+      </div>
+
+      <div className="all-divider-line mt-10 mb-4"></div>
+
+      <div className="w-full">
+        <div className="flex font-semibold">
+          <p className="glitchtext myFont" title="©Romain Flori-Cantrelle">
+            ©Romain Flori-Cantrelle {new Date().getFullYear()}.
+          </p>
+        </div>
+        <div className="justify-end flex font-semibold">
+          <p className="graycolor justify-end myFont flex">Site développé avec Next.js - TailwindCss</p>
+        </div>
+      </div>
+    </div>
+    {/* <script type="module" src="./animation.js"></script> */}
+  </>
 )
 
 export default Footer
