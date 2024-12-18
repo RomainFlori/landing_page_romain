@@ -14,8 +14,14 @@
     flex-direction: column;
     border-radius: 10px;
     color: #ffffff
-    /* box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2); */
   }
+
+  /* Media Query for Small Screens (Phones) */
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Allow the card to take up the available space */
+  }
+}
   
   .card[data-state="#about"] {
     height: 400px;

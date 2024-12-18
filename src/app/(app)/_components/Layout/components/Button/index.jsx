@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-fragments */
 import * as React from "react"
 import Button from "@mui/material/Button"
 import {styled} from "@mui/material/styles"
@@ -8,60 +7,60 @@ import DialogContent from "@mui/material/DialogContent"
 import IconButton from "@mui/material/IconButton"
 import CloseIcon from "@mui/icons-material/Close"
 
-import Image from "next/image"
-// import UserForm from "../Form"
-// import contactIphone from "../../../../../../../public/svg/contact-iphone.svg"
-
-const BootstrapDialog = styled(Dialog)(({theme}) => ({
-	"& .MuiDialogActions-root": {
-		padding: theme.spacing(1),
-	},
+const GlassDialog = styled(Dialog)(({theme}) => ({
+  "& .MuiDialog-paper": {
+    borderRadius: "16px",
+    background: "rgba(0, 0, 0, 0.2)", // Semi-transparent white
+    backdropFilter: "blur(10px)", // Blur effect
+    maxWidth: "600px",
+    transition: "all 0.4s ease-in-out",
+    padding: "1%",
+  },
 }))
 
-export default function CustomizedDialogs({title, firstletter}) {
-	const [open, setOpen] = React.useState(false)
+export default function CustomizedDialogs({title, firstletter, color}) {
+  const [open, setOpen] = React.useState(false)
 
-	const handleClickOpen = () => {
-		setOpen(true)
-	}
-	const handleClose = () => {
-		setOpen(false)
-	}
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+  const handleClose = () => {
+    setOpen(false)
+  }
 
-	return (
-		<React.Fragment>
-			<Button onClick={handleClickOpen} className="my-animation myFont text-white hover:scale-105 duration-200 font-semibold">
-				{firstletter}
-				<div className="myFont lowercase">{title}</div>
-			</Button>
-			<BootstrapDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open} PaperProps={{sx: {padding: "2rem 1rem", maxWidth: "100%"}}}>
-				<DialogTitle className="md:pl-9 p-0" sx={{m: 0, p: 0, pl: "56px"}} id="customized-dialog-title">
-					<p className="font-semibold text-2xl md:text-left text-center">Me contacter</p>
-				</DialogTitle>
-				<IconButton
-					aria-label="close"
-					onClick={handleClose}
-					className="md:flex hidden"
-					sx={{
-						position: "absolute",
-						right: 38,
-						top: 38,
-					}}
-				>
-					<CloseIcon />
-				</IconButton>
-				<DialogContent
-					dividers
-					className="md:p-9 p-0"
-					sx={{
-						display: "flex",
-					}}
-				>
-					<p>Mon tel: 0699197324</p>
-					<p>Mon email: romain.flori-cantrelle@epitech.eu</p>
+  return (
+    <React.Fragment>
+      {/* Trigger Button */}
+      <Button onClick={handleClickOpen} className="my-animation myFont text-white duration-300 uppercase tracking-wider">
+        <div className="flex items-center">
+          <span className="text-4xl">{firstletter}</span>
+          <div className="myFont lowercase text-lg">{title}</div>
+        </div>
+      </Button>
 
-				</DialogContent>
-			</BootstrapDialog>
-		</React.Fragment>
-	)
+      {/* Glass Effect Modal */}
+      <GlassDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+        {/* Header */}
+        <DialogTitle className="text-center myFont md:text-left text-2xl font-semibold mb-2 text-white" sx={{position: "relative", padding: "1rem"}}>
+          Me Contacter
+          <IconButton aria-label="close" onClick={handleClose} className="absolute right-4 top-4 transition-all">
+            <CloseIcon fontSize="medium" />
+          </IconButton>
+        </DialogTitle>
+
+        {/* Content */}
+        <DialogContent dividers className="p-6 flex flex-col space-y-4">
+          <p className="myFont text-white text-lg font-medium">
+            Mon téléphone: <span className="text-white">0699197324</span>
+          </p>
+          <p className="myFont text-white text-lg font-medium">
+            Mon email:{" "}
+            <span href="mailto:romain.flori-cantrelle@epitech.eu" className="myFont text-white hover:underline cursor-pointer">
+              romain.flori-cantrelle@epitech.eu
+            </span>
+          </p>
+        </DialogContent>
+      </GlassDialog>
+    </React.Fragment>
+  )
 }

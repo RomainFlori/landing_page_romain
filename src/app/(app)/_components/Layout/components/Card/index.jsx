@@ -20,8 +20,8 @@ const Card = ({
   }
 
   return (
-    <div className={`card ${activeSection !== "#about" ? "is-active" : ""}`} id={cardId}>
-      <div className="card-header">
+    <div className={`card ${activeSection !== "#about" ? "is-active" : ""}` } id={cardId}>
+      <div className="card-header ">
         <div
           className="card-cover"
           style={{

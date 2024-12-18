@@ -11,8 +11,8 @@ const transporter = nodemailer.createTransport({
 	port: 587,
 	secure: false,
 	auth: {
-		user: "contact@sherp.ai",
-		pass: "iodfghjdoigodghdfogndfong343543",
+		user: "",
+		pass: "",
 	},
 })
 
@@ -22,17 +22,10 @@ export async function POST(request) {
 
 		const mailOption = {
 			from: email,
-			to: "agathe@loopsider.com",
-			cc: "tech@loopsider.com",
+			to: "",
+			cc: "",
 			subject: "Demande de démo",
-			html: `
-			<h3>Nouvelle demande de démo de la part de ${firstName} ${lastName} </h3>
-			<p>Voici les informations de la personne:</p>
-			<li> Téléphone: ${phone} </li>
-			<li> Travail: ${job} </li>
-			<li> Société: ${company}</li>
-			<li> Email: ${email}</li>
-			<li> Pays: ${country}</li>`,
+			html: ``,
 		}
 
 		await transporter.sendMail(mailOption)

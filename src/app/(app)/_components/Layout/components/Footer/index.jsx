@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import Image from "next/image"
-import BasicModal from "../Button"
 
 import "./animation.js"
 
@@ -16,13 +14,16 @@ const Footer = () => (
           <h2>Autres liens</h2>
         </div>
       </div>
-      <div className="my-5 flex w-full flex-row ">
+      <div className="my-5 flex w-full flex-row graycolor ">
         <div className="w-1/2">
           <a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-            <p>Home</p>
+            <p>Haut de page</p>
           </a>
-		  <a className="link-underline link-underline-black hover:scale-105 duration-200" href="/">
-            <p>Home</p>
+		      <a className="link-underline link-underline-black hover:scale-105 duration-200" href="#why">
+            <p>Pourquoi me choisir ?</p>
+          </a>
+          <a className="link-underline link-underline-black hover:scale-105 duration-200" href="#projects">
+            <p>Mes projets</p>
           </a>
         </div>
 
@@ -41,12 +42,11 @@ const Footer = () => (
             ©Romain Flori-Cantrelle {new Date().getFullYear()}.
           </p>
         </div>
-        <div className="justify-end flex font-semibold">
+        <div className="justify-end flex font-semibold mt-3">
           <p className="graycolor justify-end myFont flex">Site développé avec Next.js - TailwindCss</p>
         </div>
       </div>
     </div>
-    {/* <script type="module" src="./animation.js"></script> */}
   </>
 )
 
