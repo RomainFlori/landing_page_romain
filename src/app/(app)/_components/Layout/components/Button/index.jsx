@@ -31,10 +31,21 @@ export default function CustomizedDialogs({title, firstletter, color}) {
   return (
     <React.Fragment>
       {/* Trigger Button */}
-      <Button onClick={handleClickOpen} className="my-animation myFont text-white duration-300 uppercase tracking-wider">
+      <Button
+        onClick={handleClickOpen}
+        className="my-animation myFont text-white duration-300 uppercase"
+        sx={{
+          padding: "0px",
+          fontSize: "16px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          minWidth: "auto",
+        }}
+      >
         <div className="flex items-center">
-          <span className="text-4xl">{firstletter}</span>
-          <div className="myFont lowercase text-lg">{title}</div>
+          <span className="text-xl">{firstletter}</span>
+          <div className="myFont lowercase text-sm">{title}</div>
         </div>
       </Button>
 

@@ -2,19 +2,19 @@ import {env} from "./env"
 
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
 export default {
-	title: "Romain",
+	title: "Romain Flori-Cantrelle",
 	description: "tmp",
-	images: "sherpai_favicon.png",
+	images: "rfc_logo.png",
 	lang: "fr",
 	metadataBase: env.BASE_URL,
 	// https://nextjs.org/docs/app/api-reference/functions/generate-metadata#icons
 	icons: {
-		icon: "/sherpai_favicon.png",
-		shortcut: "/sherpai_favicon.png",
-		apple: "/sherpai_favicon.png",
+		icon: "/rfc_logo.png",
+		shortcut: "/rfc_logo.png",
+		apple: "/rfc_logo.png",
 		other: {
 			rel: "favicon",
-			url: "/sherpai_favicon.png",
+			url: "/rfc_logo.png",
 		},
 	},
 	// https://nextjs.org/docs/app/api-reference/functions/generate-metadata#robots
@@ -33,19 +33,19 @@ export default {
 	},
 	// https://nextjs.org/docs/app/api-reference/functions/generate-metadata#opengraph
 	openGraph: {
-		title: "Romain FC",
+		title: "Romain Flori-Cantrelle",
 		description: "tmp",
 		url: env.BASE_URL,
-		siteName: "Romain FC",
+		siteName: "Romain Flori-Cantrelle",
 		images: [
 			{
-				url: `${env.BASE_URL}/sherpai_favicon.png`,
+				url: `${env.BASE_URL}/rfc_logo.png`,
 				width: 800,
 				height: 600,
 				alt: "Image",
 			},
 			{
-				url: `${process.env.NEXT_PUBLIC_BASE_URL}/sherpai_favicon.png`,
+				url: `${process.env.NEXT_PUBLIC_BASE_URL}/rfc_logo.png`,
 				width: 1800,
 				height: 1600,
 				alt: "Custom image alt",
