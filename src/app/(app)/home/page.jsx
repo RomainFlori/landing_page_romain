@@ -236,9 +236,9 @@ export default function HomePage() {
                 cardId="card-5410"
                 avatar="/img/polyconseil.webp"
                 year="2023"
-                workExperience="Développement du produit Sherp.ai
-            Développement du site vitrine: Sherp.ai 
-            Développement du site web officiel de Loopsider en Next.js
+                workExperience="Développement Backend Typescript
+            Développement d'un projet pour la Française des jeux (FDJ)
+            Méthode agile, équipe de 20 développeurs backend, utilisation d'APIs
             "
                 description="Typescript, Postman, APIs, Agile"
                 fullname="Polyconseil"
