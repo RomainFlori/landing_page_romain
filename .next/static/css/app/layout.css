@@ -810,10 +810,6 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
 .text-\[40px\] {
   font-size: 40px;
 }
@@ -843,9 +839,6 @@ video {
 }
 .leading-none {
   line-height: 1;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 .text-black {
   --tw-text-opacity: 1;
