@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="px-4 flex w-full justify-end my-20 animate-on-scroll opacity-0 transition-opacity duration-2000 ease-in-out">
           <p className="text-sm md:text-lg myFont graycolor md:w-1/2 w-full">
             Je suis Romain Flori-Cantrelle, diplômé d'un <b>Master 5 en programmation</b> à Epitech Paris. Durant mes études, j'ai réalisé cinq stages, bien au-delà de la moyenne, privilégiant les
-            projets concrets et utiles en entreprise. En 4ᵉ année, je suis partis à New York pour mes études, me permettant de perfectionner mon anglais. Mon stage de fin d'études chez{" "}
+            projets concrets et utiles en entreprise. En 4ᵉ année, je suis parti à New York pour mes études, me permettant de perfectionner mon anglais. Mon stage de fin d'études chez{" "}
             <b>Loopsider</b> en fullstack JavaScript m'a confirmé ma passion pour le développement. Aujourd'hui, je recherche un <b>CDI en programmation</b> pour continuer à évoluer et m'épanouir dans
             ce métier.
           </p>
