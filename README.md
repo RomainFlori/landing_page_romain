@@ -1,4 +1,4 @@
-# 🚀 Next.js Project Starter
+# 🚀 Portfolio de Romain Flori-Cantrelle - développé sans template
 
 Une application moderne basée sur **Next.js 15+** 
 ---
