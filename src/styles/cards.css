@@ -3,6 +3,8 @@
 .card {
     max-width: 360px;
     width: 340px;
+    height: 100%;
+    min-height: 370px;
     margin: auto;
     overflow-y: auto;
     position: relative;
@@ -97,6 +99,8 @@
   .card-avatar {
     width: 100px;
     height: 100px;
+        max-width: 100px;
+    max-height: 100px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     object-position: center;

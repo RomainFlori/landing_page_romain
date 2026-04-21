@@ -1,4 +1,4 @@
-// File: /home/romain/projects/landing_page_romain/src/app/(app)/page.jsx
+// File: C:\Users\flori\Documents\GitHub\landing_page_romain\src\app\(app)\page.jsx
 import * as entry from '../../../../src/app/(app)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:20-alpine AS base
 
 # https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
 # Install dependencies only when needed

@@ -8,7 +8,7 @@ const Card = ({
   time = "Durée: 6 mois",
   year = "2024",
   description,
-  about,
+  about= "",
   workExperience,
   internship,
   cardId, // Unique card ID

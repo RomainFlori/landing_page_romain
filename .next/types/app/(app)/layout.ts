@@ -1,4 +1,4 @@
-// File: /home/romain/projects/landing_page_romain/src/app/(app)/layout.jsx
+// File: C:\Users\flori\Documents\GitHub\landing_page_romain\src\app\(app)\layout.jsx
 import * as entry from '../../../../src/app/(app)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
